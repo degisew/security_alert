@@ -97,10 +97,3 @@ class connection(StructuredNode):
     location = RelationshipTo(Location, 'ARE_FROM')
     browser = RelationshipTo(Browser, 'USES_BROWSER')
 
-
-# MATCH (c:connection {name: 'Addis'})
-# CREATE (c)-[r1:HAS_IP]->(i:Ip {name: 'Ip'})-[r2:HAS_ADDRESS]->(ipadd:IpAddress {address: '192.168.0.1'}),
-#  (c)-[r3:USES_DEVICE]->(d:Device {name: 'Device'})-[r4:HAS_DETAIL]->(di:DeviceInfo {os: 'ubuntu', platform: 'linux', source: 'unknown'}),
-#  (c)-[r5:ARE_FROM]->(l:Location {name: 'Location'})-[r6:LOCATED_IN]->(li:LocationInfo {city: 'Addis Ababa', country: 'Ethiopia'}),
-#  (c)-[r7:USES_BROWSER]->(b:Browser {name: 'Browser'})-[r8:HAS_DETAIL]->(bi:BrowserInfo {version: '94.0.1', name: 'chrome'})
-# RETURN r1, r2, r3, r4, r5, r6, r7, r8, c, l, i, d, b, bi, li, di, ipadd;
