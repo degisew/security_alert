@@ -136,9 +136,23 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
-EMAIL_HOST = 'localhost'
-EMAIL_HOST_USER = ''
-EMAIL_HOST_PASSWORD = ''
-EMAIL_PORT = 2525
-DEFAULT_FROM_EMAIL = 'jegisew21@gmail.com'
+# EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
+# EMAIL_HOST = 'localhost'
+# EMAIL_HOST_USER = ''
+# EMAIL_USE_TLS = True
+# EMAIL_HOST_PASSWORD = ''
+# EMAIL_PORT = 2525
+# DEFAULT_FROM_EMAIL = 'jegisew21@gmail.com'
+
+# EMAIL_HOST = 'smtp.addissystems.co'
+# EMAIL_PORT = config('PORT')
+# # EMAIL_PORT = 465
+# EMAIL_USE_TLS = True
+# EMAIL_HOST_USER = 'support@addissystems.co'
+# EMAIL_HOST_PASSWORD = config('EMAIL_PASSWORD_CO')
+
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'jegisew21@gmail.com'
+EMAIL_HOST_PASSWORD = 'ausyibizwwvvrvdl'

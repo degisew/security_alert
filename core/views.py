@@ -10,59 +10,13 @@ from core.models import connection, status, Ip, Device, Browser, Location
 # from core.models import Device, User
 from core.serializers import EntitySerializer
 from pulsarConsumer import consumer, producer, all
+from pulsarConsumer.consumer import pulsar_consumer
 
 
 def produce(request):
-    # pulsar_message = {
-    #    'user_device': { 
-    #     'platform': 'Linux',
-    #     'os': 'Ubuntu',
-    #     'source': 'tender client',
-    #     'browser': 'Chrome',
-    #     'browser_version': '94.0.1'
-    # },
-    # 'ip': '192.168.0.1',
-    # 'location': {
-    #     'country': 'Ethiopia',
-    #     'city': 'Addis Ababa'
-    # }
-    # }
-
-    # conn = connection.nodes.get_or_none(name='Addis')
-
-    # ip = pulsar_message.get('userIP')
-    # os = pulsar_message.get('user_device').get('os')
-    # platform = pulsar_message.get('user_device').get('platform')
-    # source = pulsar_message.get('user_device').get('source')
-    # browser_name = pulsar_message.get('user_device').get('browser')
-    # browser_version = pulsar_message.get('user_device').get('browserVersion')
-    # country = pulsar_message.get('location').get('country')
-    # city = pulsar_message.get('location').get('city')
-
-
-    # if conn:
-    #     #creating Instances
-    #     ip = Ip(ip=ip).save()
-    #     user_device = device(os=os, platform=platform, source=source).save()
-    #     browser = Browser(name=browser_name, version=browser_version).save()
-    #     location = Location(country=country, city=city).save()
-
-    #     # Creating relationship
-    #     conn.ip.connect(ip)
-    #     conn.device.connect(user_device)
-    #     conn.location.connect(location)
-    #     conn.browser.connect(browser)
-
-
-    # else: {
-    #     print('connection not found for email: %s', pulsar_message.get('email'))
-    # }
-    # Status(status="Failed").save()
-    # con = connection.nodes.get_or_none(Uid='addissystemsMIKnatmek167148')
-    # all.all()
-    # producer.produce_message()
-    # consumer.consume_message()
+    pulsar_consumer()
     return HttpResponse("con")
+
 # def create(request):
 #     URL = 'https://account.qa.addissystems.et/Account'
 #     data = requests.get(URL)
