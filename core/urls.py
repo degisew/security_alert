@@ -4,5 +4,5 @@ from core.views import produce
 
 
 urlpatterns = [
-    path('produce/', produce, name='produce'),
+    path('security-alerts/', produce, name='alert'),
 ]
