@@ -15,6 +15,7 @@ django-neomodel = "*"
 pulsar-client = "==3.3.0"
 avro = "*"
 neo4j = "*"
+drf-yasg = {extras = ["validation"], version = "*"}
 
 [dev-packages]
 
