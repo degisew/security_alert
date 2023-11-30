@@ -1,4 +1,5 @@
-from django.http import HttpResponse
+from rest_framework import response
+from rest_framework.decorators import api_view
 import recordlinkage as rl
 from decouple import config
 import pandas as pd
@@ -12,10 +13,10 @@ from core.serializers import EntitySerializer
 from pulsarConsumer import consumer, producer, all
 from pulsarConsumer.consumer import pulsar_consumer
 
-
+@api_view(['GET'])
 def produce(request):
     pulsar_consumer()
-    return HttpResponse("con")
+    # return response("con")
 
 # def create(request):
 #     URL = 'https://account.qa.addissystems.et/Account'
