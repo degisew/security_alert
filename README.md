@@ -1,1 +1,2 @@
 # security_alert
+security_alert is an innovative web application designed to enhance the security of user accounts by providing real-time monitoring of login activities, detecting unusual login patterns, tracking device information, and notifying users through security alert emails, similar to Gmail's security alerts. This app aims to empower users with a proactive approach to account security, enabling them to take immediate action in case of suspicious login attempts.
